@@ -47,20 +47,20 @@ main:
     |; *---------------------------------------------------------------------*
 
     |; Draw square (debug code; You can uncomment it to see a square)
-|;     CMOVE(130, R1)             |; Reg[R1] <- xTopLeft
-|;     CMOVE(30, R2)              |; Reg[R2] <- yTopLeft
-|;     CMOVE(30, R3)              |; Reg[R3] <- sideLength
-|;     .breakpoint
-|;     PUSH(R3) PUSH(R2) PUSH(R1) |; Last-argument-pushed-first (LAPF) convention
-|;     CALL(drawSquare, 3)        |; Draw the square
+    |; CMOVE(130, R1)             |; Reg[R1] <- xTopLeft
+    |; CMOVE(30, R2)              |; Reg[R2] <- yTopLeft
+    |;CMOVE(30, R3)              |; Reg[R3] <- sideLength
+     |;PUSH(R3) PUSH(R2) PUSH(R1) |; Last-argument-pushed-first (LAPF) convention
+    |; .breakpoint
+    |; CALL(drawSquare, 3)        |; Draw the square
 
     |; Draw circle (debug code; You can uncomment it to see a circle)
-     CMOVE(192, R1)             |; Reg[R1] <- xc
-     CMOVE(63, R2)              |; Reg[R2] <- yc
-     CMOVE(50, R3)              |; Reg[R3] <- radius
-     PUSH(R3) PUSH(R2) PUSH(R1) |; Last-argument-pushed-first (LAPF) convention
-    .breakpoint
-     CALL(drawCircleBres, 3)    |; Draw the circle
+    |; CMOVE(192, R1)             |; Reg[R1] <- xc
+    |; CMOVE(63, R2)              |; Reg[R2] <- yc
+     |;CMOVE(50, R3)              |; Reg[R3] <- radius
+     |;PUSH(R3) PUSH(R2) PUSH(R1) |; Last-argument-pushed-first (LAPF) convention
+    |; .breakpoint
+    |; CALL(drawCircleBres, 3)    |; Draw the circle
 
     |; *---------------------------------------------------------------------*
     |; |                                                                     |
