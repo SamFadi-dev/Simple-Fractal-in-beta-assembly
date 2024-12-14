@@ -20,13 +20,6 @@ drawFractal:
     CMOVE(0, R0)                |; R0 = 0
     BEQ(R4, end_fractal, R0)    |; if maxDepth == 0, end the fractal
 
-    |; Check if sideLength == 0
-    ANDC(R3, 1, R0)             |; R0 = sideLength & 1
-    BEQ(R0, skip_adjust, R31)   |; if sideLength is even, skip the adjustment
-    SUBC(R3, 1, R3)             |; otherwise, sideLength--
-
-skip_adjust:
-
     PUSH(R4)                    |; Push maxDepth
     PUSH(R3) PUSH(R2) PUSH(R1)  |; Push sideLength, yTopLeft, xTopLeft
     CALL(drawSquare, 3)         |; Draw the square
